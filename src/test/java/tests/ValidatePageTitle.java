@@ -3,18 +3,18 @@ package tests;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import webElements.PageTitle;
+import pageObjects.HomePage;
 
 public class ValidatePageTitle extends BaseTest {
 
     @Test
     public void validatePageTitle()
     {
+        HomePage h = new HomePage(driver);
+        String actualPageTitle = h.getPageTitle().getText();
+        String expectedPageTitle = "GREENKART";
 
-        PageTitle pt = new PageTitle(driver);
-        //compare the text from the browser with actual text.- Error..
-
-        Assert.assertEquals(pt.getTitle().getText(), "Practi");
+        Assert.assertEquals(actualPageTitle, expectedPageTitle);
     }
 
 }
