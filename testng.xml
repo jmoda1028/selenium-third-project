@@ -9,6 +9,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/Latifa/IdeaProjects/selenium-third-project">
         <classes>
             <class name="tests.ValidatePageTitle" />
+            <class name="tests.SearchProduct" />
         </classes>
     </test>
 </suite>
