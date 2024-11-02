@@ -18,14 +18,14 @@ public class SearchProduct extends BaseTest {
     @Test
     public void searchProduct() throws InterruptedException {
         HomePage h = new HomePage(driver);
-        h.getsearchInputBox().clear();
-        h.getsearchInputBox().sendKeys("cucumber");
+        h.getSearchInputBox().clear();
+        h.getSearchInputBox().sendKeys("cucumber");
         Thread.sleep(2000);
 
-        String actualProductName = h.getsearchedProduct().getText();
+        String actualProductName = h.getSearchedProduct().getText();
         String expectedProductName = "Cucumber - 1 Kg";
 
-        System.out.println(h.getsearchedProduct().getText());
+        System.out.println(actualProductName);
 
         Assert.assertEquals(actualProductName, expectedProductName);
 
