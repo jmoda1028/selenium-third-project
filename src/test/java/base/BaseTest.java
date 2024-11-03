@@ -37,9 +37,16 @@ public class BaseTest extends BrowserManager {
     }
 
 
+//    @AfterClass
+//    public void teardown() {
+//        driver.close();
+//    }
+
     @AfterClass
     public void teardown() {
-        driver.close();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
 //    public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException {
