@@ -17,6 +17,7 @@ public class HomePage {
     By btnProceedCheckout = By.xpath("//div/button[@type=\'button\' and contains(text(),\'PROCEED TO CHECKOUT\')]");
     By btnAddToCart = By.xpath("//button[contains(text(), 'ADD TO CART')]");
     By msgEmptyCart = By.xpath("//div[@class='cart-preview active']/div/div/div[@class='empty-cart']/h2");
+    By tabTopDeals = By.cssSelector("a[class='cart-header-navlink'][href='#/offers']");
 
     public HomePage(WebDriver driver) {
         // TODO Auto-generated constructor stub
@@ -49,6 +50,10 @@ public class HomePage {
 
     public List<WebElement> getProductsName() {
         return driver.findElements(searchedProduct);
+    }
+
+    public WebElement getTabTopDeals() {
+        return driver.findElement(tabTopDeals);
     }
 
 }
